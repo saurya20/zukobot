@@ -7,11 +7,11 @@ import re
 class RemindersCog(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.reminders = {}  # Store reminders as {(user_id, datetime): message}
-        self.check_reminders.start()  # Start background task to check reminders
+        self.reminders = {} 
+        self.check_reminders.start()  
 
     def cog_unload(self):
-        self.check_reminders.cancel()  # Stop background task when cog is unloaded
+        self.check_reminders.cancel()  
 
     @commands.command()
     async def remind(self, ctx, date: str, time: str, *, message: str):

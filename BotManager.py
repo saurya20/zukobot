@@ -11,6 +11,13 @@ intents.message_content = True
 intents.members = True
 bot = commands.Bot(command_prefix="#",intents=intents,help_command=None)
 
+### google api key to env file , keep that file in git ignore type and then push 
+
+
+## git add -A
+## git commit -m "fix adding file to git ignore"
+##v git push 
+
 
 @bot.event
 async def on_ready():
